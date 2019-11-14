@@ -1,12 +1,16 @@
 {
-  "presets": [["es2015", { "modules": false }]],
-  "plugins": [
+  "presets": [
     [
-      "component",
+      "@babel/preset-env",
       {
-        "libraryName": "element-ui",
-        "styleLibraryName": "theme-chalk"
+        "modules": "umd"
       }
-    ]
+    ],
+    "@vue/babel-preset-jsx"
+  ],
+  "plugins": [
+    "@babel/plugin-transform-runtime",
+    "@babel/plugin-syntax-jsx",
+    "transform-vue-jsx"
   ]
 }
