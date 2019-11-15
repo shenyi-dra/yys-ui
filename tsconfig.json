@@ -13,7 +13,7 @@
     "moduleResolution": "node",
     "baseUrl": "./",
     "paths": {
-      "@": ["./packages"]
+      "@packages/*": ["packages/*"]
     },
     "typeRoots": ["./types"],
     "allowSyntheticDefaultImports": true,
