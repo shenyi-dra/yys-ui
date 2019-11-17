@@ -24,6 +24,10 @@ npm run demo
 
 npm i -g cross-env element-theme
 
+npm i element-theme -g
+
+npm run build:et
+
 # 文件夹目录
 
 demo DEMO 展示目录
