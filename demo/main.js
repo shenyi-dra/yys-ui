@@ -1,9 +1,10 @@
 import Vue from "vue";
 import App from "./App.vue";
 
-import YysUI from "../dist/index";
-import "element-ui/lib/theme-chalk/index.css";
+import YysUI from "../src/main";
+import "../dist/assets/styles/index.css";
 
+console.log("YysUI", YysUI);
 Vue.use(YysUI.YysButton);
 Vue.config.productionTip = false;
 

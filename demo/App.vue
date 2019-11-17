@@ -1,15 +1,13 @@
 <template>
   <div id="app">
-    <YysButton>
-      <i class="el-icon-edit"></i> Hello
-    </YysButton>
+    <YysButton> <i class="el-icon-edit"></i> Hello </YysButton>
   </div>
 </template>
 
 <script>
 export default {
   name: "app",
-  components: {}
+  components: {},
 };
 </script>
 

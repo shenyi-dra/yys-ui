@@ -35,6 +35,14 @@ const performance = {
  * 插件
  */
 const plugins = [
+  new HtmlWebpackPlugin({
+    chunks: ["index", "vendors"],
+    favicon: path.resolve(__dirname, "./demo/favicon.ico"),
+    filename: "index.html",
+    entry: path.resolve(__dirname, "./demo/index.html"),
+    template: path.resolve(__dirname, "./demo/index.html"),
+    publicPath: publicPath,
+  }),
   new MiniCssExtractPlugin({
     filename: "assets/styles/[name].css",
     chunkFilename: "assets/styles/[id].css",
@@ -50,7 +58,7 @@ if (devMode) {
 const webpackConfig = {
   mode: env,
   entry: {
-    index: "./src/main.ts",
+    index: "./demo/main.js",
   },
   output: {
     path: path.resolve(__dirname + "/dist"),
@@ -186,6 +194,23 @@ const webpackConfig = {
         canPrint: true,
       }),
     ],
+  },
+  devServer: {
+    historyApiFallback: {
+      rewrites: [
+        {
+          from: /^\/$/,
+          to: "/index.html",
+        },
+      ],
+      disableDotRule: true,
+    },
+    host: "127.0.0.1",
+    // hot: true,
+    port: 8000,
+    proxy: {},
+    publicPath,
+    contentBase: path.resolve(__dirname, "dist"),
   },
   plugins,
   performance,

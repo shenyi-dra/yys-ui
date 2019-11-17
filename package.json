@@ -12,15 +12,12 @@
   ],
   "scripts": {
     "clean": "rm -rf ./dist",
-    "test": "cross-env NODE_ENV=development webpack --entry app=./src/main.js",
-    "build": "cross-env NODE_ENV=development webpack --entry index=./packages/index.ts",
-    "build:dev": "npm run build",
-    "build:prod": "cross-env NODE_ENV=production webpack --entry index=./packages/index.ts",
-    "server": "cross-env NODE_ENV=development webpack --entry app=./src/main.js && webpack-dev-server --color --progres --open",
-    "server:dev": "npm run server",
-    "start": "npm run build && npm run server",
-    "start:dev": "npm run build && npm run server",
-    "rebuild": "npm run clean && npm run build"
+    "build": "cross-env NODE_ENV=development webpack",
+    "build:prod": "cross-env NODE_ENV=production webpack",
+    "serve": "cross-env webpack && webpack-dev-server --inline --color --progres --open --config webpack.app.config.js",
+    "rebuild": "npm run clean && npm run build",
+    "rebuild:prod": "npm run clean && npm run build:prod",
+    "demo": "cross-env NODE_ENV=development webpack-dev-server --inline --color --progres --open --config webpack.app.config.js"
   },
   "dependencies": {
     "element-ui": "^2.11.1",
@@ -40,7 +37,7 @@
     "@vue/babel-preset-jsx": "^1.1.2",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.6",
-    "babel-plugin-component": "^1.1.1",
+    "babel-plugin-import": "^1.12.2",
     "babel-plugin-syntax-jsx": "^6.18.0",
     "babel-plugin-transform-vue-jsx": "^3.7.0",
     "babel-polyfill": "^6.26.0",
@@ -57,6 +54,7 @@
     "postcss-preset-env": "^6.6.0",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
+    "ts-import-plugin": "^1.6.1",
     "ts-loader": "^6.2.1",
     "tslint": "^5.12.1",
     "typescript": "^3.4.5",

@@ -3,22 +3,14 @@
     [
       "@babel/preset-env",
       {
-        "modules": "commonjs"
+        "modules": "umd"
       }
     ],
     "@vue/babel-preset-jsx"
   ],
   "plugins": [
-    "@babel/plugin-transform-runtime",
-    "@babel/plugin-syntax-jsx",
     "transform-vue-jsx",
-    [
-      "component",
-      {
-        "libraryName": "element-ui",
-        "styleLibraryName": "theme-chalk"
-      },
-      "element-ui"
-    ]
+    "@babel/plugin-transform-runtime",
+    "@babel/plugin-syntax-jsx"
   ]
 }

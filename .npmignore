@@ -1,3 +1,5 @@
 .awcache/
 .vscode/
 *.tgz
+public/
+src/

@@ -1,26 +1,46 @@
-# install
+# 药研社 UI 组件库
 
-## 安装 cross-env
+前端 Framework Vue
+https://vuejs.org/
 
-npm install -g cross-env
+## 使用 Quick Start
 
-## 安装 element 主题
+npm i yys-web-ui -S
 
-npm i element-theme -g
+```
+import Vue from 'vue
+import YysUI from 'yys-web-ui'
+import "yys-web-ui/dist/assets/styles/index.";
+
+Vue.use(YysUI)
+```
+
+## DEMO 展示
+
+修改 demo 文件夹下的 main.js，添加想展示的组件，并运行命令
+npm run demo
+
+# 开发
+
+npm i -g cross-env element-theme
 
 # 文件夹目录
 
-dist 打包目录
+demo DEMO 展示目录
+dist 最终打包文件目录
 packages 自定义组件目录
+src 源码目录，自定义代码
 test 测试目录
 types TypeScript 申明目录
 
-## 打包开发环境
+## 开发环境打包
 
-npm run build OR npm run build:dev
+npm run build
 
-## 打开 webpack-dev-server 可将修改组件引入进行查看
+## 生产环境打包，会对文件进行压缩，处理，
 
-入口文件 src/main.js
+npm run build:prod
 
-## 打包最终优化及亚索文件夹
+## 打包
+
+npm pack
