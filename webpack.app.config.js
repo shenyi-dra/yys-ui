@@ -141,8 +141,8 @@ const webpackConfig = {
             loader: "file-loader",
             options: {
               name: "[name].[ext]",
-              publicPath: "/assets/fonts/",
-              outputPath: "/assets/fonts/",
+              publicPath: "/assets/styles/fonts/",
+              outputPath: "/assets/styles/fonts/",
             },
           },
         ],

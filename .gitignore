@@ -3,8 +3,6 @@
 /node_modules/
 /dll
 
-
-
 # Created by https://www.gitignore.io/api/macos,linux,windows,intellij,visualstudio
 # Edit at https://www.gitignore.io/?templates=macos,linux,windows,intellij,visualstudio
 
@@ -505,3 +503,6 @@ MigrationBackup/
 .idea/
 yarn.lock
 /.VSCodeCounter
+
+
+src/styles/theme/*

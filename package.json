@@ -17,7 +17,9 @@
     "serve": "cross-env webpack && webpack-dev-server --inline --color --progres --open --config webpack.app.config.js",
     "rebuild": "npm run clean && npm run build",
     "rebuild:prod": "npm run clean && npm run build:prod",
-    "demo": "cross-env NODE_ENV=development webpack-dev-server --inline --color --progres --open --config webpack.app.config.js"
+    "demo": "cross-env NODE_ENV=development webpack-dev-server --inline --color --progres --open --config webpack.app.config.js",
+    "build:et": "et -i ./src/styles/element-variables.scss",
+    "apply:et": "et -c ./src/styles/element-variables.scss -o ./src/styles/theme/"
   },
   "dependencies": {
     "element-ui": "^2.11.1",
